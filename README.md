@@ -12,3 +12,4 @@ TODO
  
  TODO from zorkyy:
  - Publish to the Marketplace
+ - cyrillic layout search support
