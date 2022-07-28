@@ -8,3 +8,7 @@ TODO
 
  - options (font size and style, focus style, key bindings, sorting options)
  - subcategory indentation?
+ 
+ 
+ TODO from zorkyy:
+ - Publish to the Marketplace
