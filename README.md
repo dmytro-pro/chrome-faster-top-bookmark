@@ -10,7 +10,7 @@ TODO
  - subcategory indentation?
  
  
- TODO from zorkyy:
+ TODO from dmytro-pro:
  - Publish to the Marketplace
  - cyrillic layout search support
 
