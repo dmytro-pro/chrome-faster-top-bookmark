@@ -8,11 +8,11 @@ TODO
 
  - Options (font size and style, focus style, key bindings, sorting options)
  - Subcategory indentation?
- 
- 
- TODO from dmytro-pro:
-- Cyrillic layout search support
-- Publish to the Marketplace
+
+
+### TODO from dmytro-pro:
+- [X] Cyrillic layout search support
+- [ ] Publish to the Marketplace
 
 Installation
 ====

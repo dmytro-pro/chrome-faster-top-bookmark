@@ -8,6 +8,33 @@ var DOWN_KEYCODE = 40;
 var UP_KEYCODE = 38;
 var CONFIRM_KEYCODE = 13;
 
+const cyrillicToEnglishMap = {
+  'а': 'f', 'б': ',', 'в': 'd', 'г': 'u', 'д': 'l',
+  'е': 't', 'ґ': '\\', 'ж': ';', 'з': 'p', 'и': 'b',
+  'й': 'q', 'к': 'r', 'л': 'k', 'м': 'v', 'н': 'y',
+  'о': 'j', 'п': 'g', 'р': 'h', 'с': 'c', 'т': 'n',
+  'у': 'e', 'ф': 'a', 'х': '[', 'ц': 'w', 'ч': 'x',
+  'ш': 'i', 'щ': 'o', 'ї': ']', 'і': 's', 'ь': 'm',
+  'є': '\'', 'ю': '.', 'я': 'z'
+  // Add the rest of the characters as needed
+};
+
+const englishToCyrillicMap = Object.fromEntries(
+    Object.entries(cyrillicToEnglishMap).map(([k, v]) => [v, k])
+);
+
+function convertToLayout(input, map) {
+  return input.split('').map(char => map[char] || char).join('');
+}
+
+function convertCyrillicToEnglish(input) {
+  return convertToLayout(input, cyrillicToEnglishMap);
+}
+
+function convertEnglishToCyrillic(input) {
+  return convertToLayout(input, englishToCyrillicMap);
+}
+
 function filterRecursively(nodeArray, childrenProperty, filterFn, results) {
 
   results = results || [];
@@ -197,9 +224,18 @@ function createInitialTree() {
       setTimeout( function() {
         text = document.getElementById("search").value;
         if (text.length) {
-          newNodes = fuzzySearch.search(text);
-          resetUi(); 
-          createUiFromNodes(newNodes) 
+          let cyrillicQuery = convertEnglishToCyrillic(text);
+          let englishQuery = convertCyrillicToEnglish(text);
+
+          // Search with both queries
+          const cyrillicResults = fuzzySearch.search(cyrillicQuery);
+          const englishResults = fuzzySearch.search(englishQuery);
+
+          // Combine or prioritize results
+          let newNodes = [...englishResults, ...cyrillicResults];
+
+          resetUi();
+          createUiFromNodes(newNodes)
           if (newNodes.length) focusItem(0);
 
           if (!newNodes.length || text !== newNodes[0].title) {
