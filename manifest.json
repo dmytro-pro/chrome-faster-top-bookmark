@@ -23,7 +23,7 @@
       }
    },
    "description": "Easily add bookmarks to the top of any folder. Includes spotlight-like search with mouse/kb support. Default key: ⌘+b (win:ctrl+b).",
-   "homepage_url": "https://github.com/zorkyy/chrome-faster-bookmark-to-top",
+   "homepage_url": "https://github.com/dmytro-pro/chrome-faster-bookmark-to-top",
    "icons": {
       "128": "bookmark.png",
       "16": "bookmark.png",
