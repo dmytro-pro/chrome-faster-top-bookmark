@@ -33,5 +33,5 @@
    "name": "Faster Top Bookmark - Add Bookmark faster",
    "permissions": [ "bookmarks", "tabs" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "0.0.1"
+   "version": "0.0.2"
 }
