@@ -3,6 +3,8 @@ Chrome Faster Top Bookmark
 
 Simple Chrome extension that adds a new browser button to quickly add bookmarks to the top of the selected category (with fewer mouse clicks then using the native 'star' button)
 
+https://chromewebstore.google.com/detail/faster-top-bookmark-add-b/mkgladddfalacgpcjfklgcgpgpcpkoec
+
 TODO
 ====
 
@@ -12,7 +14,7 @@ TODO
 
 ### TODO from dmytro-pro:
 - [X] Cyrillic layout search support
-- [ ] Publish to the Marketplace
+- [X] Publish to the Marketplace
 
 Installation
 ====
