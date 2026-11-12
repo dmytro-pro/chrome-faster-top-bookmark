@@ -12,18 +12,18 @@
       "default_title": "Faster Top Bookmark Button"
    },
    "commands": {
-      "_execute_browser_action": {
+      "_execute_action": {
          "suggested_key": {
             "chromeos": "Ctrl+B",
             "default": "Ctrl+B",
-            "linux": "Ctrl+B",
+            "linux": "Alt+B",
             "mac": "Command+B",
-            "windows": "Ctrl+B"
+            "windows": "Alt+B"
          }
       }
    },
-   "description": "Easily add bookmarks to the top of any folder. Includes spotlight-like search with mouse/kb support. Default key: ⌘+b (win:ctrl+b).",
-   "homepage_url": "https://github.com/dmytro-pro/chrome-faster-bookmark-to-top",
+   "description": "Easily add bookmarks to the top of any folder. Includes spotlight-like search with mouse/kb support. Default key: ⌘+b (win/linux: alt+b).",
+   "homepage_url": "https://github.com/dmytro-pro/chrome-faster-top-bookmark",
    "icons": {
       "128": "bookmark.png",
       "16": "bookmark.png",
@@ -32,6 +32,5 @@
    "manifest_version": 3,
    "name": "Faster Top Bookmark - Add Bookmark faster",
    "permissions": [ "bookmarks", "tabs" ],
-   "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "0.0.2"
+   "version": "1.0.1"
 }

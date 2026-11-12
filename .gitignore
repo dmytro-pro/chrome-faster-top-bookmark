@@ -1,0 +1,6 @@
+*.crx
+*.pem
+*.zip
+.DS_Store
+.idea/
+dist/
